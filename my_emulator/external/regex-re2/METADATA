@@ -1,0 +1,15 @@
+name: "regex-re22"
+description: "RE2 is a fast, safe, thread-friendly alternative to backtracking regular expression engines like those used in PCRE, Perl, and Python. It is a C++ library."
+third_party {
+  license_type: NOTICE
+  last_upgrade_date {
+    year: 2019
+    month: 2
+    day: 20
+  }
+  identifier {
+    type: "Git"
+    value: "https://github.com/google/re2"
+    version: "79ef3b2d31f06493f687ef9e947d9632bad54b9b"
+  }
+}
