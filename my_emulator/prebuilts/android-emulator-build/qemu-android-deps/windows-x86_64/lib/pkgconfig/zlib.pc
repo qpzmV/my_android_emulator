@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix=/usr/local
+libdir=/tmp/jansene-build-temp-33312/install-windows-x86_64/lib
+sharedlibdir=/tmp/jansene-build-temp-33312/install-windows-x86_64/lib
+includedir=/tmp/jansene-build-temp-33312/install-windows-x86_64/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.10
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
