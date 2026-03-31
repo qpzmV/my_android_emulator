@@ -1,0 +1,14 @@
+prefix=/tmp/bohu-build-ffmpeg-78777/install-darwin-x86_64
+exec_prefix=${prefix}
+libdir=/tmp/bohu-build-ffmpeg-78777/install-darwin-x86_64/lib
+includedir=/tmp/bohu-build-ffmpeg-78777/install-darwin-x86_64/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 58.76.100
+Requires: libavcodec >= 58.134.100, libavutil >= 56.70.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavformat -lm -lbz2 -lz
+Libs.private: 
+Cflags: -I${includedir}

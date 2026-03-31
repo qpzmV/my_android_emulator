@@ -1,0 +1,10 @@
+prefix=/usr/local/aosp/build//install-linux-x86_64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+ 
+Name: BlueZ
+Description: Bluetooth protocol stack for Linux
+Version: 5.45
+Libs: -L${libdir} -lbluetooth
+Cflags: -I${includedir}

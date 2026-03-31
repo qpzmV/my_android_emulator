@@ -1,0 +1,14 @@
+prefix=/tmp/bohu-build-ffmpeg-78777/install-darwin-x86_64
+exec_prefix=${prefix}
+libdir=/tmp/bohu-build-ffmpeg-78777/install-darwin-x86_64/lib
+includedir=/tmp/bohu-build-ffmpeg-78777/install-darwin-x86_64/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 7.110.100
+Requires: libavutil >= 56.70.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -pthread -lm
+Libs.private: 
+Cflags: -I${includedir}

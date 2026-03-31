@@ -1,0 +1,13 @@
+This directory holds emulator-specific builds of ANGLE.
+
+How the dlls were built
+-----------------------
+
+We are basing this off of https://chromium.googlesource.com/angle/angle.
+The patches off of which the dlls themselves were built can be found in
+
+patches/
+
+base-commit-id contains hash of the commit in the chromium repo off of which
+the patches were based, and the .patch files are to be applied in their
+numbered sequence.

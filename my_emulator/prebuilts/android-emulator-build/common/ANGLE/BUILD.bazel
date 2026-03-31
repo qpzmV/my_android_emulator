@@ -1,0 +1,23 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+filegroup(
+    name = "lib_darwin_aarch64",
+    srcs = [
+        "darwin-aarch64/lib/libEGL.dylib",
+        "darwin-aarch64/lib/libGLESv1_CM.dylib",
+        "darwin-aarch64/lib/libGLESv2.dylib",
+        "darwin-aarch64/lib/libshadertranslator.dylib",
+        "darwin-aarch64/lib/libswiftshader_libEGL.dylib",
+        "darwin-aarch64/lib/libswiftshader_libGLESv2.dylib",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "include_darwin_aarch64",
+    hdrs = [
+        "darwin-aarch64/include/ShaderTranslator.h",
+    ],
+    strip_include_prefix = "darwin-aarch64/include",
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,18 @@
+filegroup(
+    name = "lib_darwin_aarch64",
+    srcs = [
+        "darwin-aarch64/libvulkan.dylib",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+filegroup(
+    name = "icds_darwin_aarch64",
+    srcs = [
+        "darwin-aarch64/icds/MoltenVK_icd.json",
+        "darwin-aarch64/icds/libMoltenVK.dylib",
+        "darwin-aarch64/icds/libvk_swiftshader.dylib",
+        "darwin-aarch64/icds/vk_swiftshader_icd.json",
+    ],
+    visibility = ["//visibility:public"],
+)

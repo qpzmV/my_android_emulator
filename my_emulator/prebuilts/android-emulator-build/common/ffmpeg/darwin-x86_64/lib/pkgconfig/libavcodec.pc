@@ -1,0 +1,14 @@
+prefix=/tmp/bohu-build-ffmpeg-78777/install-darwin-x86_64
+exec_prefix=${prefix}
+libdir=/tmp/bohu-build-ffmpeg-78777/install-darwin-x86_64/lib
+includedir=/tmp/bohu-build-ffmpeg-78777/install-darwin-x86_64/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.134.100
+Requires: libavutil >= 56.70.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -lvpx -lm -pthread -lvpx -lm -pthread -pthread -lm -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices
+Libs.private: 
+Cflags: -I${includedir}

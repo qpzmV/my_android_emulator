@@ -1,0 +1,10 @@
+# Call pkg-config with --define-variable=qtwebengine_deps_dir=<path_to_dir> to set the prefix.
+prefix=${qtwebengine_deps_dir}
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: DamageProto
+Description: Damage extension headers
+Version: 1.2.1
+Cflags: -I${includedir}
