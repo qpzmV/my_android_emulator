@@ -1,0 +1,12 @@
+prefix=/Volumes/Android/buildbot/src/android/emu-prebuilts/out/prebuilts/qt
+exec_prefix=${prefix}
+bindir=${prefix}/bin
+libexecdir=${prefix}/./libexec
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: Qt6 WebEngineQuickDelegatesQml
+Description: Qt WebEngineQuickDelegatesQml module
+Version: 6.5.3
+Libs: -L${libdir} -lQt6WebEngineQuickDelegatesQml
+Cflags:  -DQT_WEBENGINEQUICKDELEGATESQML_LIB

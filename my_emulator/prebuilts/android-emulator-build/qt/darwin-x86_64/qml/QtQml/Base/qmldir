@@ -1,0 +1,9 @@
+module QtQml.Base
+linktarget Qt6::qmlplugin
+optional plugin qmlandroidemuplugin
+classname QtQmlPlugin
+designersupported
+system
+typeinfo plugins.qmltypes
+prefer :/qt-project.org/imports/QtQml/Base/
+

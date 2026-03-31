@@ -1,0 +1,8 @@
+QT_PLUGIN.qdarwincamerapermissionAndroidEmu.TYPE = permissions
+QT_PLUGIN.qdarwincamerapermissionAndroidEmu.EXTENDS = -
+QT_PLUGIN.qdarwincamerapermissionAndroidEmu.DEPENDS = core
+QT_PLUGIN.qdarwincamerapermissionAndroidEmu.CLASS_NAME = QDarwinCameraPermissionPlugin
+QT_PLUGIN.qdarwincamerapermissionAndroidEmu.module_config = v2 staticlib
+QT_PLUGINS += qdarwincamerapermissionAndroidEmu
+QT_PLUGIN.qdarwincamerapermission.usage_descriptions = NSCameraUsageDescription
+QT_PLUGIN.qdarwincamerapermission.request_flag = -Wl,-u,_QDarwinCameraPermissionRequest

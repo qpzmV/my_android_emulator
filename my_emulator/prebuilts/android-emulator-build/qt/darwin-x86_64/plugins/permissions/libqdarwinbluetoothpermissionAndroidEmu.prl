@@ -1,0 +1,5 @@
+QMAKE_PRL_TARGET = libqdarwinbluetoothpermissionAndroidEmu.a
+QMAKE_PRL_CONFIG = static
+QMAKE_PRL_VERSION = 6.5.3
+QMAKE_PRL_LIBS = $$[QT_INSTALL_LIBS]/libQt6CoreAndroidEmu.dylib $$[QT_INSTALL_LIBS]/libQt6CoreAndroidEmu.dylib -framework IOKit -framework DiskArbitration -framework Foundation -framework CoreBluetooth
+QMAKE_PRL_LIBS_FOR_CMAKE = $$[QT_INSTALL_LIBS]/libQt6CoreAndroidEmu.dylib;$$[QT_INSTALL_LIBS]/libQt6CoreAndroidEmu.dylib;-framework IOKit;-framework DiskArbitration;-framework Foundation;-framework CoreBluetooth

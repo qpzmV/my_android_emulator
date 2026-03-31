@@ -1,0 +1,8 @@
+QT_PLUGIN.qdarwincalendarpermissionAndroidEmu.TYPE = permissions
+QT_PLUGIN.qdarwincalendarpermissionAndroidEmu.EXTENDS = -
+QT_PLUGIN.qdarwincalendarpermissionAndroidEmu.DEPENDS = core
+QT_PLUGIN.qdarwincalendarpermissionAndroidEmu.CLASS_NAME = QDarwinCalendarPermissionPlugin
+QT_PLUGIN.qdarwincalendarpermissionAndroidEmu.module_config = v2 staticlib
+QT_PLUGINS += qdarwincalendarpermissionAndroidEmu
+QT_PLUGIN.qdarwincalendarpermission.usage_descriptions = NSCalendarsUsageDescription
+QT_PLUGIN.qdarwincalendarpermission.request_flag = 

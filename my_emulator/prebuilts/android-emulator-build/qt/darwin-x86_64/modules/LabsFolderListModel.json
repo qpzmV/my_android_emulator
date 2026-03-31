@@ -1,0 +1,12 @@
+{
+    "name": "LabsFolderListModel",
+    "repository": "qtdeclarative",
+    "version": "6.5.3",
+    "built_with": {
+        "compiler_id": "AppleClang",
+        "compiler_target": "",
+        "compiler_version": "13.1.6.13160021",
+        "cross_compiled": false,
+        "target_system": "Darwin"
+    }
+}

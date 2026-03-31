@@ -1,0 +1,13 @@
+prefix=/Volumes/Android/buildbot/src/android/emu-prebuilts/out/prebuilts/qt
+exec_prefix=${prefix}
+bindir=${prefix}/bin
+libexecdir=${prefix}/./libexec
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: Qt6 WebEngineQuick
+Description: Qt WebEngineQuick module
+Version: 6.5.3
+Libs: -L${libdir} -lQt6WebEngineQuick
+Cflags: -I${includedir}/QtWebEngineQuick -I${includedir} -DQT_WEBENGINEQUICK_LIB
+Requires: Qt6Core Qt6Gui Qt6Qml Qt6Quick Qt6WebEngineCore

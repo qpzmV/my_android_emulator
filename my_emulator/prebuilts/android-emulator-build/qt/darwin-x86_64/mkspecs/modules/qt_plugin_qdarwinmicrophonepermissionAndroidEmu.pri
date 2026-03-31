@@ -1,0 +1,8 @@
+QT_PLUGIN.qdarwinmicrophonepermissionAndroidEmu.TYPE = permissions
+QT_PLUGIN.qdarwinmicrophonepermissionAndroidEmu.EXTENDS = -
+QT_PLUGIN.qdarwinmicrophonepermissionAndroidEmu.DEPENDS = core
+QT_PLUGIN.qdarwinmicrophonepermissionAndroidEmu.CLASS_NAME = QDarwinMicrophonePermissionPlugin
+QT_PLUGIN.qdarwinmicrophonepermissionAndroidEmu.module_config = v2 staticlib
+QT_PLUGINS += qdarwinmicrophonepermissionAndroidEmu
+QT_PLUGIN.qdarwinmicrophonepermission.usage_descriptions = NSMicrophoneUsageDescription
+QT_PLUGIN.qdarwinmicrophonepermission.request_flag = -Wl,-u,_QDarwinMicrophonePermissionRequest
