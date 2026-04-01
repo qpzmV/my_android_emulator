@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d31fac8fc455b7ec018e0d7990fa8e3b65f8f7d2e95e08618e72b29d7bdca575
-size 309
+CMAKE_GENERATOR_TOOLSET
+-----------------------
+
+.. versionadded:: 3.15
+
+.. include:: ENV_VAR.txt
+
+Default value for :variable:`CMAKE_GENERATOR_TOOLSET` if no Cache entry
+is present and no value is specified by :manual:`cmake(1)` ``-T`` option.
+This value is only applied if :envvar:`CMAKE_GENERATOR` is set.

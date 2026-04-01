@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ef1b79f53a317c8c05b4b12945b9976c0484e4488c108e3e49d267c098432d38
-size 364
+CMAKE_<LANG>_FLAGS_<CONFIG>
+---------------------------
+
+Flags for language ``<LANG>`` when building for the ``<CONFIG>`` configuration.
+
+The flags in this variable will be passed to the compiler after those
+in the :variable:`CMAKE_<LANG>_FLAGS` variable, but before flags added
+by the :command:`add_compile_options` or :command:`target_compile_options`
+commands.

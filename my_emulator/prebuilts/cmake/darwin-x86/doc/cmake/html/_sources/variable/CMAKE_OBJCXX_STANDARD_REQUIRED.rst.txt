@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d67f1e46c1a4335596663845a7b61472e95a3108dee9e5181d9951eca66b1a71
-size 314
+CMAKE_OBJCXX_STANDARD_REQUIRED
+------------------------------
+
+.. versionadded:: 3.16
+
+Default value for :prop_tgt:`OBJCXX_STANDARD_REQUIRED` target property if set
+when a target is created.
+
+See the :manual:`cmake-compile-features(7)` manual for information on
+compile features and a list of supported compilers.

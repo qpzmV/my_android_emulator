@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bb42484a1a0e5fd4da2f5f56c1d531935e05bd008b9c279a15734dfc48bbf557
-size 304
+Swift_LANGUAGE_VERSION
+----------------------
+
+.. versionadded:: 3.16
+
+This property sets the language version for the Swift sources in the target.  If
+one is not specified, it will default to ``<CMAKE_Swift_LANGUAGE_VERSION>`` if
+specified, otherwise it is the latest version supported by the compiler.

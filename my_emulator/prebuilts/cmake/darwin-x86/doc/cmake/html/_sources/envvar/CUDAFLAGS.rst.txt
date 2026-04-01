@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fba77f97ed9856f7f0643a2604a4d28390f37824823d059c3c2420f97f22a34c
-size 597
+CUDAFLAGS
+---------
+
+.. versionadded:: 3.8
+
+.. include:: ENV_VAR.txt
+
+Default compilation flags to be used when compiling ``CUDA`` files. Will only be
+used by CMake on the first configuration to determine ``CUDA`` default
+compilation flags, after which the value for ``CUDAFLAGS`` is stored in the
+cache as :variable:`CMAKE_CUDA_FLAGS <CMAKE_<LANG>_FLAGS>`. For any configuration
+run (including the first), the environment variable will be ignored if
+the :variable:`CMAKE_CUDA_FLAGS <CMAKE_<LANG>_FLAGS>` variable is defined.
+
+See also :variable:`CMAKE_CUDA_FLAGS_INIT <CMAKE_<LANG>_FLAGS_INIT>`.

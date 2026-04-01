@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b3675b19354e4f2d64b6e5ff6063e55735caf67aae69a7c940bd5c10203b9e73
-size 124
+#!/tmpfs/src/git/out/python3/install/bin/python3.10
+
+from idlelib.pyshell import main
+if __name__ == '__main__':
+    main()

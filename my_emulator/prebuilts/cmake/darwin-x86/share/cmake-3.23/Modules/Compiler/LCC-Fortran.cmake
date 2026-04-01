@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:edf802abcbf90e970ec0a48ae2c2194a53996056869b2716cc9c33c2b7e046f1
-size 851
+include(Compiler/LCC)
+__compiler_lcc(Fortran)
+
+set(CMAKE_Fortran_SUBMODULE_SEP "@")
+set(CMAKE_Fortran_SUBMODULE_EXT ".smod")
+
+set(CMAKE_Fortran_PREPROCESS_SOURCE
+  "<CMAKE_Fortran_COMPILER> -cpp <DEFINES> <INCLUDES> <FLAGS> -E <SOURCE> -o <PREPROCESSED_SOURCE>")
+
+set(CMAKE_Fortran_FORMAT_FIXED_FLAG "-ffixed-form")
+set(CMAKE_Fortran_FORMAT_FREE_FLAG "-ffree-form")
+
+set(CMAKE_Fortran_COMPILE_OPTIONS_PREPROCESS_ON "-cpp")
+set(CMAKE_Fortran_COMPILE_OPTIONS_PREPROCESS_OFF "-nocpp")
+
+set(CMAKE_Fortran_POSTPROCESS_FLAG "-fpreprocessed")
+
+# No -DNDEBUG for Fortran.
+string(APPEND CMAKE_Fortran_FLAGS_MINSIZEREL_INIT " -Os")
+string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O3")
+
+# No -isystem for Fortran because it will not find .mod files.
+unset(CMAKE_INCLUDE_SYSTEM_FLAG_Fortran)
+
+# Fortran-specific feature flags.
+set(CMAKE_Fortran_MODDIR_FLAG -J)

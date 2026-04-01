@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:90902d8bfce5446d20103c7c7211ef29e8999407679e1af84dcac99c0b481cca
-size 193
+CMAKE_COMPILER_IS_GNUG77
+------------------------
+
+.. versionadded:: 3.7
+
+True if the ``Fortran`` compiler is GNU.
+Use :variable:`CMAKE_Fortran_COMPILER_ID <CMAKE_<LANG>_COMPILER_ID>` instead.

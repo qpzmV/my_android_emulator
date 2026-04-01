@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:855ca8ef9f5c765516eab59695acf43c9e51f40f1a8c8efc508a585a6e3f7962
-size 191
+CMAKE_COMPILER_IS_GNUCXX
+------------------------
+
+.. versionadded:: 3.7
+
+True if the C++ (``CXX``) compiler is GNU.
+Use :variable:`CMAKE_CXX_COMPILER_ID <CMAKE_<LANG>_COMPILER_ID>` instead.

@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1620709f53523c088f18a88d3d833301c3909f8d214cb14c6d31e95207570840
-size 413
+VS_DEBUGGER_ENVIRONMENT
+-----------------------
+
+.. versionadded:: 3.13
+
+Sets the local debugger environment for Visual Studio C++ targets.
+The property value may use
+:manual:`generator expressions <cmake-generator-expressions(7)>`.
+This is defined in ``<LocalDebuggerEnvironment>`` in the Visual Studio
+project file.
+
+This property only works for Visual Studio 2010 and above;
+it is ignored on other generators.

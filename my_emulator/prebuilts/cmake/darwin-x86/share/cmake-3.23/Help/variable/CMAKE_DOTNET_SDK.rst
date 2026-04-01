@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3024f6b3b5547043b601a28de05b8441b77718bf78694990634216823589264a
-size 263
+CMAKE_DOTNET_SDK
+----------------
+
+.. versionadded:: 3.23
+
+Default value for :prop_tgt:`DOTNET_SDK` property of targets.
+
+This variable is used to initialize the :prop_tgt:`DOTNET_SDK`
+property on all targets. See that target property for additional information.

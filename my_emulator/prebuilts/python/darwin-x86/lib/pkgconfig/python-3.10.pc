@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3bc0465390b2e30acc8973b38237655720acf3426575c4b332a25f7fe2290196
-size 311
+# See: man pkg-config
+prefix=/tmpfs/src/git/out/python3/install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Python
+Description: Build a C extension for Python
+Requires:
+Version: 3.10
+Libs.private: -ldl   -framework CoreFoundation
+Libs:
+Cflags: -I${includedir}/python3.10

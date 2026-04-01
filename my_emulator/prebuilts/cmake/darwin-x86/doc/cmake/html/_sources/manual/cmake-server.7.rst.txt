@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7087e341ad75cf1bd55340c9b7a1d67a761575224f74d63429178518b5ee0709
-size 206
+.. cmake-manual-description: CMake Server
+
+cmake-server(7)
+***************
+
+The :manual:`cmake(1)` server mode has been removed since CMake 3.20.
+Clients should use the :manual:`cmake-file-api(7)` instead.

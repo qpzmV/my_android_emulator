@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c4ea427c6d2be9099b9b222a77be06b599e08204d4a25e4258430ecceef18a70
-size 232
+include(Compiler/FujitsuClang)
+
+set(_fjclang_ver "${CMAKE_C_COMPILER_VERSION_INTERNAL}")
+set(CMAKE_C_COMPILER_VERSION "${CMAKE_C_COMPILER_VERSION_INTERNAL}")
+include(Compiler/Clang-C)
+set(CMAKE_C_COMPILER_VERSION "${_fjclang_ver}")

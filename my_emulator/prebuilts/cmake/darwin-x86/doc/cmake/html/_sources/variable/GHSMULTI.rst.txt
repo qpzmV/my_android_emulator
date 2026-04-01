@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:23e97edea15fff99a1fb3f75226c0c62d5e9337acb2f8055ecc4d3422f76eb5b
-size 218
+GHSMULTI
+--------
+
+.. versionadded:: 3.3
+
+``1`` when using :generator:`Green Hills MULTI` generator.
+
+Also, Set to ``1`` when the target system is a Green Hills platform
+(i.e. When CMAKE_SYSTEM_NAME is ``GHS-MULTI``).

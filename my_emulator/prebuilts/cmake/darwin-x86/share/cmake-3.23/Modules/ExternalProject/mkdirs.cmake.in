@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:49d0b91b482aa471a7879ddd101a9f79f3f093ac5e4c66888a5913268a6736eb
-size 466
+# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
+# file Copyright.txt or https://cmake.org/licensing for details.
+
+cmake_minimum_required(VERSION 3.5)
+
+file(MAKE_DIRECTORY
+  "@source_dir@"
+  "@binary_dir@"
+  "@install_dir@"
+  "@tmp_dir@"
+  "@stamp_dir@"
+  "@download_dir@"
+  "@log_dir@"
+)
+
+set(configSubDirs @CMAKE_CONFIGURATION_TYPES@)
+foreach(subDir IN LISTS configSubDirs)
+    file(MAKE_DIRECTORY "@stamp_dir@/${subDir}")
+endforeach()

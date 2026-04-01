@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:78b4e72b88ee30363790660d170a9ae64c33d9cef645e7ddc26ec9e559f05b6f
-size 554
+#!/bin/bash -ex
+# Download & build ninja on the local machine
+# works on Linux, OSX, and Windows (Git Bash)
+# leaves output in /tmp/prebuilts/ninja/$OS-x86/
+
+PROJ=ninja
+VER=1.5.3
+MSVS=2013
+
+source $(dirname "$0")/build-common.sh build-common.sh
+
+# needed for cygwin
+export PATH="$PATH":.
+
+# ninja specific steps
+cd $RD
+git clone https://github.com/martine/ninja.git src
+cd src
+git checkout v$VER
+if [[ "$OS" == "windows" ]] ; then
+	 PLATFORM="--platform=msvc"
+fi
+./configure.py --bootstrap $PLATFORM
+
+# install
+cp $RD/src/ninja $INSTALL
+
+commit_and_push

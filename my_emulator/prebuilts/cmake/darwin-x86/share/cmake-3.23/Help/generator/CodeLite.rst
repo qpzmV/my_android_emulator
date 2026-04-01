@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:98327ec9fce9831cf9327681e3874883dbac5f9185ed0594160af71dc235531c
-size 867
+CodeLite
+----------
+
+Generates CodeLite project files.
+
+Project files for CodeLite will be created in the top directory and
+in every subdirectory which features a CMakeLists.txt file containing
+a :command:`project` call.
+The appropriate make program can build the
+project through the default ``all`` target.  An ``install`` target
+is also provided.
+
+.. versionadded:: 3.7
+ The :variable:`CMAKE_CODELITE_USE_TARGETS` variable may be set to ``ON``
+ to change the default behavior from projects to targets as the basis
+ for project files.
+
+This "extra" generator may be specified as:
+
+``CodeLite - MinGW Makefiles``
+ Generate with :generator:`MinGW Makefiles`.
+
+``CodeLite - NMake Makefiles``
+ Generate with :generator:`NMake Makefiles`.
+
+``CodeLite - Ninja``
+ Generate with :generator:`Ninja`.
+
+``CodeLite - Unix Makefiles``
+ Generate with :generator:`Unix Makefiles`.

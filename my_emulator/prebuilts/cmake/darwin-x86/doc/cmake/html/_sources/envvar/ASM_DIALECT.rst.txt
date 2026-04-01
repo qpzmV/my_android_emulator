@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f615e9df09ad2bdfc16adff7d97dc729fc14eb8cf62ee1b6471e2f8fa9c201f6
-size 843
+ASM<DIALECT>
+------------
+
+.. include:: ENV_VAR.txt
+
+Preferred executable for compiling a specific dialect of assembly language
+files. ``ASM<DIALECT>`` can be ``ASM``, ``ASM_NASM`` (Netwide Assembler),
+``ASM_MASM`` (Microsoft Assembler) or ``ASM-ATT`` (Assembler AT&T).
+Will only be used by CMake on the first configuration to determine
+``ASM<DIALECT>`` compiler, after which the value for ``ASM<DIALECT>`` is stored
+in the cache as
+:variable:`CMAKE_ASM<DIALECT>_COMPILER <CMAKE_<LANG>_COMPILER>`. For subsequent
+configuration runs, the environment variable will be ignored in favor of
+:variable:`CMAKE_ASM<DIALECT>_COMPILER <CMAKE_<LANG>_COMPILER>`.
+
+.. note::
+  Options that are required to make the compiler work correctly can be included;
+  they can not be changed.
+
+.. code-block:: console
+
+  $ export ASM="custom-compiler --arg1 --arg2"

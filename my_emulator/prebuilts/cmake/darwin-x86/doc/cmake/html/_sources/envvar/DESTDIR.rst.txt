@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b0f681c65e6a33a43adbd1a779beaafcc50ae744d72390c85224657e341c3d1
-size 1058
+DESTDIR
+-------
+
+.. include:: ENV_VAR.txt
+
+On UNIX one can use the ``DESTDIR`` mechanism in order to relocate the
+whole installation.  ``DESTDIR`` means DESTination DIRectory.  It is
+commonly used by packagers to install software in a staging directory.
+
+For example, running
+
+.. code-block:: shell
+
+  make DESTDIR=/package/stage install
+
+will install the software using the installation prefix, e.g. ``/usr/local``,
+prepended with the ``DESTDIR`` value which gives ``/package/stage/usr/local``.
+The packaging tool may then construct the package from the content of the
+``/package/stage`` directory.
+
+See the :variable:`CMAKE_INSTALL_PREFIX` variable to control the
+installation prefix when configuring a build tree.  Or, when using
+the :manual:`cmake(1)` command-line tool's ``--install`` mode,
+one may specify a different prefix using the ``--prefix`` option.
+
+.. note::
+
+  ``DESTDIR`` may not be used on Windows because installation
+  prefix usually contains a drive letter like in ``C:/Program Files``
+  which cannot be prepended with some other prefix.

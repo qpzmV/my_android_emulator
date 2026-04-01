@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8ea1cc53a5a1b58f0f21be9b1c7ec27a2636f24743ba109e511c912409784080
-size 179
+CMAKE_COMPILER_IS_GNUCC
+-----------------------
+
+.. versionadded:: 3.7
+
+True if the ``C`` compiler is GNU.
+Use :variable:`CMAKE_C_COMPILER_ID <CMAKE_<LANG>_COMPILER_ID>` instead.

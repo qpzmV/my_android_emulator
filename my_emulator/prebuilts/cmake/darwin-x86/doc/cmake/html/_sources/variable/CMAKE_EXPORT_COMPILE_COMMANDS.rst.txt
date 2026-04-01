@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fc0c374441e2ce572aa4f035b043376432c9a7e858a5aa0e9d468f2b5d06ac48
-size 1170
+CMAKE_EXPORT_COMPILE_COMMANDS
+-----------------------------
+
+.. versionadded:: 3.5
+
+Enable/Disable output of compile commands during generation.
+
+If enabled, generates a ``compile_commands.json`` file containing the exact
+compiler calls for all translation units of the project in machine-readable
+form.  The format of the JSON file looks like:
+
+.. code-block:: javascript
+
+  [
+    {
+      "directory": "/home/user/development/project",
+      "command": "/usr/bin/c++ ... -c ../foo/foo.cc",
+      "file": "../foo/foo.cc"
+    },
+
+    ...
+
+    {
+      "directory": "/home/user/development/project",
+      "command": "/usr/bin/c++ ... -c ../foo/bar.cc",
+      "file": "../foo/bar.cc"
+    }
+  ]
+
+This is initialized by the :envvar:`CMAKE_EXPORT_COMPILE_COMMANDS` environment
+variable, and initializes the :prop_tgt:`EXPORT_COMPILE_COMMANDS` target
+property for all targets.
+
+.. note::
+  This option is implemented only by :ref:`Makefile Generators`
+  and the :generator:`Ninja`.  It is ignored on other generators.
+
+  This option currently does not work well in combination with
+  the :prop_tgt:`UNITY_BUILD` target property or the
+  :variable:`CMAKE_UNITY_BUILD` variable.

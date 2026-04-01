@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c526e3fc2dbf430920fe6dd6171aec48c1cfde2c3ad4727a3f43612c5be3950f
-size 398
+# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
+# file Copyright.txt or https://cmake.org/licensing for details.
+
+
+# This module is shared by multiple languages; use include blocker.
+if(__LINUX_COMPILER_NVIDIA)
+  return()
+endif()
+set(__LINUX_COMPILER_NVIDIA 1)
+
+include(Platform/Linux-PGI)
+
+macro(__linux_compiler_nvhpc lang)
+  __linux_compiler_pgi(${lang})
+endmacro()

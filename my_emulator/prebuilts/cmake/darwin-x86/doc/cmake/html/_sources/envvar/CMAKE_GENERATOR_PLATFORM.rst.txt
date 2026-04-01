@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aad155bcd423711aa9847752a4da69c2083a44fd77b93221d4ba219398496e07
-size 312
+CMAKE_GENERATOR_PLATFORM
+------------------------
+
+.. versionadded:: 3.15
+
+.. include:: ENV_VAR.txt
+
+Default value for :variable:`CMAKE_GENERATOR_PLATFORM` if no Cache entry
+is present and no value is specified by :manual:`cmake(1)` ``-A`` option.
+This value is only applied if :envvar:`CMAKE_GENERATOR` is set.

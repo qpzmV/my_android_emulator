@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:858eb0f50533bd3bd16fe32815f77fabfed92ede885070b6cb15827ec66ea500
-size 143
+# Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.
+# Licensed to PSF under a Contributor Agreement.
+
+"""The pgen2 package."""

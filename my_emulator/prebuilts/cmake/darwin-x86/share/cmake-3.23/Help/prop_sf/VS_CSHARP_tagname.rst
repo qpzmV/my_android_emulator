@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a04b70ae2c9cd3ce64e9d0024bcd9b84f2cc690687c2247b5c53e7ab38cd8d1
-size 648
+VS_CSHARP_<tagname>
+-------------------
+
+.. versionadded:: 3.8
+
+Visual Studio and CSharp source-file-specific configuration.
+
+Tell the :manual:`Visual Studio generators <cmake-generators(7)>`
+to set the source file tag ``<tagname>``
+to a given value in the generated Visual Studio CSharp
+project. Ignored on other generators and languages. This property
+can be used to define dependencies between source files or set any
+other Visual Studio specific parameters.
+
+Example usage:
+
+.. code-block:: cmake
+
+  set_source_files_property(<filename>
+           PROPERTIES
+           VS_CSHARP_DependentUpon <other file>
+           VS_CSHARP_SubType "Form")

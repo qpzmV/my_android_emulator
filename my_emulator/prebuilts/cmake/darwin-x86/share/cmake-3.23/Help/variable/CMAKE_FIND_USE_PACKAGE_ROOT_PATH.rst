@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d7289a6242a0be2f13e2b97672dce26d539e0021b7c334fad0264d65eed1e9a5
-size 848
+CMAKE_FIND_USE_PACKAGE_ROOT_PATH
+--------------------------------
+
+.. versionadded:: 3.16
+
+Controls the default behavior of the following commands for whether or not to
+search paths provided by :variable:`<PackageName>_ROOT` variables:
+
+* :command:`find_program`
+* :command:`find_library`
+* :command:`find_file`
+* :command:`find_path`
+* :command:`find_package`
+
+By default this variable is not set, which is equivalent to it having
+a value of ``TRUE``.  Explicit options given to the above commands
+take precedence over this variable.
+
+See also the :variable:`CMAKE_FIND_USE_CMAKE_PATH`,
+:variable:`CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH`,
+:variable:`CMAKE_FIND_USE_CMAKE_SYSTEM_PATH`,
+:variable:`CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH`,
+:variable:`CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY`,
+and :variable:`CMAKE_FIND_USE_PACKAGE_REGISTRY` variables.

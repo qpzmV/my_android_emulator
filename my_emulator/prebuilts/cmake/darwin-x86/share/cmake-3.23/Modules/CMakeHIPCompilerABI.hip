@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:84c3b9673c105474b53584675f6bac98f0c6e874e651b782c66fd8311203bf75
-size 293
+#ifndef __HIP__
+#  error "A C or C++ compiler has been selected for HIP"
+#endif
+
+#include "CMakeCompilerABI.h"
+
+int main(int argc, char* argv[])
+{
+  int require = 0;
+  require += info_sizeof_dptr[argc];
+#if defined(ABI_ID)
+  require += info_abi[argc];
+#endif
+  (void)argv;
+  return require;
+}

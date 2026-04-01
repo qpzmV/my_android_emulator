@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d0295a7e69a079dff36817529bbe64adc03de40a33d11ac5d63bd288cdf38f96
-size 390
+CMAKE_EXPORT_COMPILE_COMMANDS
+-----------------------------
+
+.. versionadded:: 3.17
+
+.. include:: ENV_VAR.txt
+
+The default value for :variable:`CMAKE_EXPORT_COMPILE_COMMANDS` when there
+is no explicit configuration given on the first run while creating a new
+build tree.  On later runs in an existing build tree the value persists in
+the cache as :variable:`CMAKE_EXPORT_COMPILE_COMMANDS`.

@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:34431ba796924c0d895bf50846b6ecf778e059c7d640eac2d77d54a751cd1367
-size 686
+CMAKE_NO_BUILTIN_CHRPATH
+------------------------
+
+Do not use the builtin binary editor to fix runtime library search
+paths on installation.
+
+When an ELF or XCOFF binary needs to have a different runtime library
+search path after installation than it does in the build tree, CMake uses
+a builtin editor to change the runtime search path in the installed copy.
+If this variable is set to true then CMake will relink the binary before
+installation instead of using its builtin editor.
+
+.. versionadded:: 3.20
+
+  This variable also applies to XCOFF binaries' LIBPATH.  Prior to the
+  addition of the XCOFF editor in CMake 3.20, this variable applied only
+  to ELF binaries' RPATH/RUNPATH.

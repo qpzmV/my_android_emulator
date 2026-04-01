@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f2821f8da75b5472e251eeac86ee9f1adab3030a807919ddd001dbd72083493
-size 118
+set(MSYS 1)
+include(Platform/CYGWIN)
+set(CMAKE_SHARED_LIBRARY_PREFIX "msys-")
+set(CMAKE_SHARED_MODULE_PREFIX "msys-")

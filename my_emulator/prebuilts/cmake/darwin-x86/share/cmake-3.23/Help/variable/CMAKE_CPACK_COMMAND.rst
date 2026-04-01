@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b72da065f2d726047566cfe2c9814364bd46c96ab74b551dfd6c488e6bcf3e71
-size 314
+CMAKE_CPACK_COMMAND
+-------------------
+
+.. versionadded:: 3.13
+
+Full path to :manual:`cpack(1)` command installed with CMake.
+
+This is the full path to the CPack executable :manual:`cpack(1)` which is
+useful from custom commands that want to use the :manual:`cmake(1)` ``-E``
+option for portable system commands.

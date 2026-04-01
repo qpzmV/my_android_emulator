@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b8ea0833e6f6c8cdadb99bc3fe1a4e53b33248d0767a09fa2362569d7433a3a2
-size 576
+XCODE_EMBED_<type>_PATH
+-----------------------
+
+.. versionadded:: 3.20
+
+This property is used only by the :generator:`Xcode` generator.  When defined,
+it specifies the relative path to use when embedding the items specified by
+:prop_tgt:`XCODE_EMBED_<type>`.  The path is relative
+to the base location of the ``Embed XXX`` build phase associated with
+``<type>``.  See the Xcode documentation for the base location of each
+``<type>``.
+
+The supported values for ``<type>`` are:
+
+``FRAMEWORKS``
+
+``APP_EXTENSIONS``
+  .. versionadded:: 3.21
+
+``PLUGINS``
+  .. versionadded:: 3.23

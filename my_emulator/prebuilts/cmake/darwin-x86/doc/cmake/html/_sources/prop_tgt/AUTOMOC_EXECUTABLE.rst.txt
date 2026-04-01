@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc7dd08d11b8dd5737438ba54dc22f0f00476fe2bd0f659c5ae1a35f57da4954
-size 660
+AUTOMOC_EXECUTABLE
+------------------
+
+.. versionadded:: 3.14
+
+:prop_tgt:`AUTOMOC_EXECUTABLE` is file path pointing to the ``moc``
+executable to use for :prop_tgt:`AUTOMOC` enabled files. Setting
+this property will make CMake skip the automatic detection of the
+``moc`` binary as well as the sanity-tests normally run to ensure
+that the binary is available and working as expected.
+
+Usually this property does not need to be set. Only consider this
+property if auto-detection of ``moc`` can not work -- e.g. because
+you are building the ``moc`` binary as part of your project.
+
+See the :manual:`cmake-qt(7)` manual for more information on using CMake
+with Qt.

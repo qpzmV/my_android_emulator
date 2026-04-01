@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a57c265abae532bcf09d5851ce69c2f472545e75405a5de194b15c763a421619
-size 207
+CTEST_RUN_CURRENT_SCRIPT
+------------------------
+
+.. versionadded:: 3.11
+
+Setting this to 0 prevents :manual:`ctest(1)` from being run again when it
+reaches the end of a script run by calling ``ctest -S``.

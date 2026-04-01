@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:879349f3f5e708ee278f7080b3d48190ee1b69d559c5401fac12a8cae74943bb
-size 532
+CMAKE_ECLIPSE_GENERATE_SOURCE_PROJECT
+-------------------------------------
+
+.. versionadded:: 3.6
+
+This cache variable is used by the Eclipse project generator.  See
+:manual:`cmake-generators(7)`.
+
+If this variable is set to TRUE, the Eclipse project generator will generate
+an Eclipse project in :variable:`CMAKE_SOURCE_DIR` . This project can then
+be used in Eclipse e.g. for the version control functionality.
+:variable:`CMAKE_ECLIPSE_GENERATE_SOURCE_PROJECT` defaults to FALSE; so
+nothing is written into the source directory.

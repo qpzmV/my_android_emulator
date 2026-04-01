@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:863d4a84f6c38ab8af848990cdd980f787844219dab74c2cdde37993948dfe88
-size 237
+CMAKE_ANDROID_NATIVE_LIB_DEPENDENCIES
+-------------------------------------
+
+.. versionadded:: 3.4
+
+Default value for the :prop_tgt:`ANDROID_NATIVE_LIB_DEPENDENCIES` target
+property.  See that target property for additional information.

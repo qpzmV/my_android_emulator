@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:616a8b53d4be35b0818195509a366ca177b8f4d4b7cfa0aeb8c82a7ad4d7554d
-size 527
+CMAKE_ANDROID_API
+-----------------
+
+.. versionadded:: 3.1
+
+When :ref:`Cross Compiling for Android with NVIDIA Nsight Tegra Visual Studio
+Edition`, this variable may be set to specify the default value for the
+:prop_tgt:`ANDROID_API` target property.  See that target property for
+additional information.
+
+Otherwise, when :ref:`Cross Compiling for Android`, this variable provides
+the Android API version number targeted.  This will be the same value as
+the :variable:`CMAKE_SYSTEM_VERSION` variable for ``Android`` platforms.

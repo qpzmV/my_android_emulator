@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:608c4e9dfa7ca9e4b367e6d660026194168e81a84d0f49054386f5cb615501e3
-size 511
+#ifdef __cplusplus
+#  error "A C++ compiler has been selected for C."
+#endif
+
+#ifdef __CLASSIC_C__
+#  define const
+#endif
+
+#include "CMakeCompilerABI.h"
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc;
+char* argv[];
+#else
+int main(int argc, char* argv[])
+#endif
+{
+  int require = 0;
+  require += info_sizeof_dptr[argc];
+  require += info_byte_order_big_endian[argc];
+  require += info_byte_order_little_endian[argc];
+#if defined(ABI_ID)
+  require += info_abi[argc];
+#endif
+  (void)argv;
+  return require;
+}
