@@ -1,0 +1,5 @@
+cc_library_headers {
+    name: "rapidjson_headers",
+    export_include_dirs: ["include"],
+    host_supported: true,
+}

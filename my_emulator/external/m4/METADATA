@@ -1,0 +1,17 @@
+name: "GNU M4"
+description:
+    "GNU M4 is an implementation of the traditional Unix macro processor."
+
+third_party {
+  url {
+    type: HOMEPAGE
+    value: "https://www.gnu.org/software/m4/"
+  }
+  url {
+    type: ARCHIVE
+    value: "http://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.gz"
+  }
+  version: "v1.4.19"
+  last_upgrade_date { year: 2022 month: 3 day: 29 }
+  license_type: RESTRICTED
+}
