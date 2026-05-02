@@ -1,0 +1,9 @@
+objs/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.jar
+*.zip
