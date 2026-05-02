@@ -1,0 +1,8 @@
+QT_PLUGIN.qdarwinbluetoothpermissionAndroidEmu.TYPE = permissions
+QT_PLUGIN.qdarwinbluetoothpermissionAndroidEmu.EXTENDS = -
+QT_PLUGIN.qdarwinbluetoothpermissionAndroidEmu.DEPENDS = core
+QT_PLUGIN.qdarwinbluetoothpermissionAndroidEmu.CLASS_NAME = QDarwinBluetoothPermissionPlugin
+QT_PLUGIN.qdarwinbluetoothpermissionAndroidEmu.module_config = v2 staticlib
+QT_PLUGINS += qdarwinbluetoothpermissionAndroidEmu
+QT_PLUGIN.qdarwinbluetoothpermission.usage_descriptions = NSBluetoothAlwaysUsageDescription
+QT_PLUGIN.qdarwinbluetoothpermission.request_flag = 

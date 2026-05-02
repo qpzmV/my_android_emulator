@@ -1,0 +1,12 @@
+prefix=/Users/lfy/curr-darwin-aarch64-qemu-deps2/install-darwin-aarch64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: GObject
+Description: GLib Type, Object, Parameter and Signal Library
+Requires: glib-2.0
+Version: 2.38.2
+Libs: -L${libdir} -lgobject-2.0
+Libs.private: /Users/lfy/curr-darwin-aarch64-qemu-deps2/install-darwin-aarch64/lib/libffi.la
+Cflags:

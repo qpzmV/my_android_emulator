@@ -1,0 +1,8 @@
+QT_PLUGIN.qdarwinlocationpermissionAndroidEmu.TYPE = permissions
+QT_PLUGIN.qdarwinlocationpermissionAndroidEmu.EXTENDS = -
+QT_PLUGIN.qdarwinlocationpermissionAndroidEmu.DEPENDS = core
+QT_PLUGIN.qdarwinlocationpermissionAndroidEmu.CLASS_NAME = QDarwinLocationPermissionPlugin
+QT_PLUGIN.qdarwinlocationpermissionAndroidEmu.module_config = v2 staticlib
+QT_PLUGINS += qdarwinlocationpermissionAndroidEmu
+QT_PLUGIN.qdarwinlocationpermission.usage_descriptions = NSLocationUsageDescription
+QT_PLUGIN.qdarwinlocationpermission.request_flag = 
