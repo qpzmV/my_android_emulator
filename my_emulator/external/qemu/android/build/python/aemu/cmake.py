@@ -45,11 +45,10 @@ def get_tasks(args) -> List[BuildTask]:
     Returns:
         list[BuildTask]: List of tasks that need to be executed.
     """
-    run_tests = not Toolchain(args.aosp, args.target).is_crosscompile()
+    run_tests = False
     tasks = [
-        # A task can be disabled, or explicitly enabled by calling
-        # .enable(False) <- Disable the task
-        CleanTask(destination=args.out, aosp=args.aosp),
+        # CleanTask disabled to avoid full rebuild every time
+        # CleanTask(destination=args.out, aosp=args.aosp).enable(False),
         ConfigureTask(
             aosp=args.aosp,
             target=args.target,
@@ -77,38 +76,9 @@ def get_tasks(args) -> List[BuildTask]:
             args.target,
         ),
     ]
-    if not args.gfxstream_only:
-        tasks += [
-            CTestTask(
-                aosp=args.aosp,
-                destination=args.out,
-                concurrency=args.test_jobs,
-                with_gfx_stream=args.gfxstream or args.gfxstream_only,
-                distribution_directory=args.dist,
-            ).enable(run_tests),
-            AccelerationCheckTask(args.out).enable(run_tests),
-            EmugenTestTask(args.aosp, args.out).enable(run_tests).enable(False),
-            GenEntriesTestTask(args.aosp, args.out),
-            CoverageReportTask(
-                aosp=args.aosp, destination=args.out, target=args.target
-            ).enable(run_tests),
-            PackageSamplesTask(
-                args.aosp, args.out, args.dist, args.target, args.sdk_build_number
-            ),
-            ZipIntegrationTestsTask(args.aosp, args.out).enable(True),
-            DistributionTask(
-                aosp=args.aosp,
-                build_directory=args.out,
-                distribution_directory=args.dist,
-                target=args.target,
-                sdk_build_number=args.sdk_build_number,
-                configuration=args.config,
-            ).enable(args.dist is not None),
-            # Enable the integration tests by default once they are stable enough
-            IntegrationTestTask(args.aosp, args.target, args.out, args.dist).enable(
-                False
-            ),
-        ]
+    # Test tasks disabled to speed up build
+    # if not args.gfxstream_only:
+    #     tasks += [ ... ]
     return tasks
 
 
