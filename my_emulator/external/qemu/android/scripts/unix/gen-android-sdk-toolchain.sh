@@ -516,10 +516,10 @@ prepare_build_for_darwin() {
     OSX_DESIRED=12.2
 
     # This is the list of supported SDKs,
-    OSX_SDK_SUPPORTED="${OSX_REQUIRED} 10.15 10.16 11.0 11.1 11.2 11.3 11.4 11.5 11.6 12.0 12.1 12.3 13.0 13.1 13.3 14.0 14.2 14.3 14.4 14.5 15.0 15.1 15.2 15.3 15.4 16.0 16.1 16.2 17.0 26.0 26.1 26.2 26.3 26.4 26.5"
+    OSX_SDK_SUPPORTED="${OSX_REQUIRED} 10.15 10.16 11.0 11.1 11.2 11.3 11.4 11.5 11.6 12.0 12.1 12.3 13.0 13.1 13.3 14.0 14.2 14.3 14.4 14.5 15.0 15.1 15.2"
     OSX_XCODE=$(xcodebuild -version | tr '\n' ' ')
     OSX_SDK_INSTALLED_LIST=$(xcodebuild -showsdks 2>/dev/null | \
-            egrep --color=never -o " macosx[0-9]+\.[0-9]+" | sed -e "s/.*macosx//g" | sort -nu | \
+            egrep --color=never -o " macosx\d+.\d+$" | sed -e "s/.*macosx//g" | sort -n | \
             tr '\n' ' ')
     if [ -z "$OSX_SDK_INSTALLED_LIST" ]; then
         panic "Please install XCode for compatible with os version: $OSX_VERSION on this machine!"
@@ -787,10 +787,9 @@ prepare_build_for_darwin_aarch64() {
     CLANG_BINDIR=$PREBUILT_TOOLCHAIN_DIR/bin
     OSX_VERSION=$(sw_vers -productVersion)
     OSX_DEPLOYMENT_TARGET=10.16
-    OSX_SDK_SUPPORTED="10.11 10.12 10.13 10.14 10.15 10.16 11.0 11.1 11.2 11.3 11.4 11.5 11.6 12.0 12.1 12.3 13.0 13.1 13.3 14.0 14.2 14.3 14.4 14.5 15.0 15.1 15.2 15.3 15.4 16.0 16.1 16.2 17.0 26.0 26.1 26.2 26.3 26.4 26.5"
+    OSX_SDK_SUPPORTED="10.11 10.12 10.13 10.14 10.15 10.16 11.0 11.1 11.2 11.3 11.4 11.5 11.6 12.0 12.1 12.3 13.0 13.1 13.3 14.0 14.2 14.3 14.4 14.5 15.0 15.1 15.2 15.3 15.4 16.0 16.1 16.2 17.0 17.1 17.2 17.3 17.4 18.0 18.1 18.2 19.0 19.1 19.2 20.0 20.1 20.2 21.0 21.1 21.2 22.0 22.1 22.2 23.0 23.1 23.2 24.0 24.1 24.2 25.0 25.1 25.2 26.0 26.1 26.2 26.3 26.4"
     OSX_SDK_INSTALLED_LIST=$(xcodebuild -showsdks 2>/dev/null | \
-            egrep --color=never -o " macosx[0-9]+\.[0-9]+" | sed -e "s/.*macosx//g" | sort -nu | \
-            tr '\n' ' ')
+            grep --color=never macosx | sed -e "s/.*macosx//g" | sort -n | tr '\n' ' ')
     if [ -z "$OSX_SDK_INSTALLED_LIST" ]; then
         panic "Please install XCode on this machine!"
     fi
