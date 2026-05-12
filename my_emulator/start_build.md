@@ -24,4 +24,5 @@ sdkmanager "system-images;android-34;default;arm64-v8a"
 ## 创建虚拟机
 avdmanager create avd -n Android14_ARM -k "system-images;android-34;default;arm64-v8a" --device "pixel"
 ## 运行虚拟机（ARM64 Mac 必须用 -gpu host）
+export ANDROID_SDK_ROOT=/opt/homebrew/share/android-commandlinetools
 ./external/qemu/objs/distribution/emulator/emulator -avd Android14_ARM -gpu host

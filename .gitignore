@@ -7,3 +7,14 @@ objs/
 *.exe
 *.jar
 *.zip
+my_emulator/prebuilts/android-emulator-build/common/automation/aarch64-linux/gcclib/
+my_emulator/prebuilts/clang/host/darwin-x86/clang-r530567/bin/clang-19
+my_emulator/prebuilts/clang/host/darwin-x86/clang-r530567/bin/clang-check
+my_emulator/prebuilts/clang/host/darwin-x86/clang-r530567/bin/clang-format
+my_emulator/prebuilts/clang/host/darwin-x86/clang-r530567/bin/clang-scan-deps
+my_emulator/prebuilts/clang/host/darwin-x86/clang-r530567/bin/clang-tidy
+my_emulator/prebuilts/clang/host/darwin-x86/clang-r530567/bin/clangd
+my_emulator/prebuilts/clang/host/darwin-x86/clang-r530567/bin/dsymutil
+my_emulator/prebuilts/clang/host/darwin-x86/clang-r530567/bin/lld
+my_emulator/prebuilts/clang/host/darwin-x86/clang-r530567/bin/llvm-bolt
+my_emulator/prebuilts/clang/host/darwin-x86/clang-r530567/bin/llvm-dwp
